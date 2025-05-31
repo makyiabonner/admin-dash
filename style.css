@@ -136,6 +136,28 @@ nav > div:first-of-type{
     padding: 10px;
 }
 .main-wrapper{
+    display: grid;
     grid-area: wrapper;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    padding: 2rem 3rem;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
     background-color: var(--backdrop-color);
+}
+
+.projects-div{
+    grid-area: projects;
+}
+.card-wrapper{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.announcements-div{
+    grid-area: announcements;
+}
+.trending-div{
+    grid-area: trending;
 }
